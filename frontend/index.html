@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CottonScan — AI Leaf Disease Detection</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="logo">
+      <div class="logo-dot"></div>
+      CottonScan
+    </div>
+    <ul class="nav-links">
+      <li><a href="#detect">Detect</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-left">
+      <div class="hero-tag">AI-Powered Plant Diagnostics</div>
+      <h1>Detect Cotton <em>Leaf Disease</em> Instantly</h1>
+      <p class="hero-desc">Upload a photo of a cotton leaf and our MobileNet + LSTM model diagnoses diseases in seconds
+        — trained on 4,963 images across 5 disease categories.</p>
+      <div class="hero-stats">
+
+        <a href="#detect" class="cta-btn">
+          Scan a Leaf
+          <span class="cta-arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- DETECT -->
+  <section id="detect">
+    <div class="section-header">
+      <div>
+        <h2 class="section-title">Upload & <em>Diagnose</em></h2>
+      </div>
+    </div>
+
+
+<div class="upload-grid">
+<div>
+  
+    <h1>Cotton Leaf Disease Detection</h1>
+<div class="upload-icon">🌿</div>
+ <div class="upload-title">Drop your leaf image here</div>
+  <p class="upload-subtitle">Supports JPG, PNG, WEBP up to 10MB.<br>Ensure the leaf is clearly visible.</p>
+  
+    <input type="file" id="imageInput">
+    <button onclick="predictImage()">Predict</button>
+   </div>
+   <div class="preview-container" id="preview-container" style="display:none;">
+
+      <div class="preview-img-wrap">
+        <img id="preview-img" src="" alt="Uploaded leaf">
+
+        <div class="scan-overlay" id="scan-overlay"></div>
+      </div>
+
+   <!-- RESULT PANEL -->
+<div class="result-panel" id="result-panel">
+
+  <!-- EMPTY STATE -->
+  <div class="result-empty" id="result-empty">
+
+    <div class="result-empty-icon">🔍</div>
+
+    <p>
+      Your diagnosis will <br>
+      appear here after analysis
+    </p>
+
+  </div>
+
+  <!-- RESULT CONTENT -->
+  <div class="result-content" id="result-content" style="display:none;">
+
+    <h3 id="disease-name">Leaf Disease</h3>
+
+    <div class="confidence-box">
+      Confidence:
+      <span id="confidence">98%</span>
+    </div>
+
+    <div class="solution-box">
+      <h4>Recommended Solution</h4>
+
+      <p id="solution-text">
+        Apply suitable fungicide and remove infected leaves.
+      </p>
+    </div>
+
+  </div>
+
+</div>
+  </section>  
+   
+</div>
+ <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">CottonScan</div>
+    <div class="footer-note">MobileNet + LSTM · TensorFlow · Cotton Disease AI · 2025</div>
+  </footer>
+<script src="script.js"></script>
+</body>
+</html>
